@@ -39,8 +39,8 @@ python --version
 ### 3. Клонирај го репото
 
 ```cmd
-git clone https://github.com/kirilangelkovikj-stack/intelegentni-sistemi-3.git
-cd intelegentni-sistemi-3
+git clone https://github.com/vfilip008/Inteligentni_Sistemi_MIG.git
+cd Inteligentni_Sistemi_MIG
 ```
 
 ---
