@@ -130,6 +130,7 @@ Inteligentni_Sistemi_MIG/
 ## Технологии
 
 - **Python** — стандардна библиотека (http.server, csv, json)
+- **Voyage AI API** — embeddings за семантичка сличност (voyage-3 модел)
 - **Groq API** — AI решенија (llama-3.3-70b-versatile, бесплатен tier)
 - **HTML/CSS/JS** — веб интерфејс (без framework)
 
