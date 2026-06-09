@@ -11,7 +11,7 @@
 - **Keyword Search** — брзо пребарување по клучни зборови, работи без API клуч
 - **AI Solutions (Groq)** — генерира решенија за задачи користејќи Groq API (бесплатно)
 
-**Датасет:** Codeforces Problem Dataset (~10,900 задачи) 
+**Датасет:** Codeforces Problem Dataset (~10,900 задачи)  
 **Формат:** CSV / JSON
 
 
