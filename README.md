@@ -77,13 +77,15 @@ cd Inteligentni_Sistemi_MIG
 Отворете Command Prompt (cmd) во папката на проектот и извршете:
 
 **Windows:**
-```set GROQ_API_KEY=вашиот-groq-клуч
+```
+set GROQ_API_KEY=вашиот-groq-клуч
 set ANTHROPIC_API_KEY=вашиот-voyage-клуч
 python search_engine.py --dataset CodeForces.csv
 ```
 
 **Mac / Linux:**
-```export GROQ_API_KEY="вашиот-groq-клуч"
+```
+export GROQ_API_KEY="вашиот-groq-клуч"
 export ANTHROPIC_API_KEY="вашиот-voyage-клуч"
 python search_engine.py --dataset CodeForces.csv
 ```
