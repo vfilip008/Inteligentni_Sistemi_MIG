@@ -145,19 +145,12 @@ def build_embeddings(problems: list) -> list:
     for i in range(0, total, batch_size):
         batch = problems[i:i + batch_size]
         texts = [p["search_text"] for p in batch]
-        # retry up to 3 times on failure
-        for attempt in range(3):
-            try:
-                vecs = get_embeddings_batch(texts)
-                embeddings.extend(vecs)
-                break
-            except Exception as e:
-                if attempt < 2:
-                    print(f"  Retrying batch {i}-{i+batch_size} (attempt {attempt+2}/3)...")
-                    time.sleep(3)
-                else:
-                    print(f"  ERROR on batch {i}-{i+batch_size}: {e}")
-                    embeddings.extend([[0.0] * 1024] * len(batch))
+        try:
+            vecs = get_embeddings_batch(texts)
+            embeddings.extend(vecs)
+        except Exception as e:
+            print(f"  Skipping Batch {i}-{i+batch_size}: {e}")
+            embeddings.extend([[0.0]*(1024)]*len(batch))
         pct = min(i + batch_size, total)
         print(f"  Embedded {pct:,}/{total:,} problems...", end="\r")
         time.sleep(1.0)  # longer pause to respect rate limits
